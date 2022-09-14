@@ -1,6 +1,6 @@
 branch-defaults:
   main:
-    environment: reactnd-contacts-server-dev
+    environment: null
 environment-defaults:
   reactnd-contacts-server-dev:
     branch: null
