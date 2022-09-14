@@ -37,8 +37,8 @@ jobs:
     - name: Deploy to Elastic Beanstalk
       run: >
         aws configure --profile GitProfile
-        aws configure set --profile GitProfile aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }} 
-        aws configure set --profile GitProfile aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }} 
-        aws configure set --profile GitProfile default.region ${{ secrets.AWS_DEFAULT_REGION }} 
+        aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }} 
+        aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }} 
+        aws configure set region us-east-1 --profile GitProfile
 
       
