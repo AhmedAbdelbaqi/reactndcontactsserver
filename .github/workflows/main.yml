@@ -23,15 +23,15 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-  - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
       # Python installation 
-  - uses: actions/setup-python@v2
+    - uses: actions/setup-python@v2
       with:
       python-version: 3.9
       # Install the EB CLI using pip
-  - name: Install EB CLI
-    run: python -m pip install --upgrade pip pip install awsebcli
+    - name: Install EB CLI
+      run: python -m pip install --upgrade pip pip install awsebcli
       # Deploy
-  - name: Deploy to Elastic Beanstalk
-    run: eb deploy
+    - name: Deploy to Elastic Beanstalk
+      run: eb deploy
       
