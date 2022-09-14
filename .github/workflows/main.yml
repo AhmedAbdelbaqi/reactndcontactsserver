@@ -36,8 +36,8 @@ jobs:
       # Deploy
     - name: Deploy to Elastic Beanstalk
       run: >
-        aws configure set aws_access_key_id ${{ aws_access.AWS_ACCESS_KEY_ID }}
-        aws configure set aws_secret_access_key ${{ aws_access.AWS_SECRET_ACCESS_KEY }}
-        aws configure set default.region ${{ aws_access.AWS_DEFAULT_REGION }}
+        aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws configure set default.region ${{ secrets.AWS_DEFAULT_REGION }}
         eb deploy 
       
